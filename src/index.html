@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Connect MetaMask</title>
+    <script type="module" src="check_balance_metamask.js"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #232526 0%, #414345 100%);
+            font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+            color: #fff;
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        button {
+            background: linear-gradient(90deg, #00c6ff 0%, #0072ff 100%);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 14px 32px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 12px 0;
+            cursor: pointer;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        button:hover {
+            background: linear-gradient(90deg, #0072ff 0%, #00c6ff 100%);
+            transform: translateY(-2px) scale(1.04);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 18px;
+            font-size: 1rem;
+            color: #aeefff;
+            min-height: 24px;
+            letter-spacing: 0.5px;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="connectWallet()" id="connectButton">Connect MetaMask</button>
+    <label for="connectButton" id="connectLabel"></label>
+    <br />
+    <button onclick="checkBalance()" id="checkBalanceButton">Check Balance</button>
+    <label for="balanceLabel" id="balanceLabel"></label>
+</body>
+
+</html>
